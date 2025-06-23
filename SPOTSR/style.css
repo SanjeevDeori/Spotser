@@ -1,0 +1,68 @@
+.hero-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+}
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-8px); /* Increased lift on hover */
+    box-shadow: 0 25px 35px -8px rgba(0, 0, 0, 0.15), 0 12px 15px -6px rgba(0, 0, 0, 0.08); /* More pronounced shadow */
+}
+.testimonial-card {
+    transition: all 0.3s ease;
+}
+.testimonial-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1), 0 6px 8px -3px rgba(0, 0, 0, 0.05);
+}
+.booking-form {
+    box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.15), 0 6px 8px -3px rgba(0, 0, 0, 0.08);
+}
+
+/* Animations */
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInFromBottom 1s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.3s; /* Delay for a smoother sequence */
+    opacity: 0; /* Start hidden */
+}
+
+.animate-fade-in-right {
+    animation: fadeInFromRight 1s ease-out forwards;
+    animation-delay: 0.5s; /* Delay for image */
+    opacity: 0; /* Start hidden */
+}
