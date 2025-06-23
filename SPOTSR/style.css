@@ -1,5 +1,7 @@
 .hero-gradient {
-    background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+  background: linear-gradient(to right, #63899b, #35a6b9);
+
+
 }
 .service-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;

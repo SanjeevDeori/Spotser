@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotsers |India's Quick Services App</title>
+    <title>Spotser |India's Quick Services App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -17,7 +17,7 @@
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
                         <i class="fas fa-home text-blue-600 text-2xl mr-2"></i>
-                        <span class="text-xl font-bold text-gray-800">Spotsers</span>
+                        <span class="text-xl font-bold text-gray-800">Spotser</span>
                     </div>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
@@ -26,7 +26,8 @@
                     <a href="#testimonials" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">Testimonials</a>
                     <a href="#faq" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">FAQ</a>
                     <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition duration-300">Contact</a>
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 shadow-md">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 shadow-md"
+                        onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
                         Book Now
                     </button>
                 </div>
@@ -51,27 +52,34 @@
             </div>
         </div>
     </nav>
-
     <section class="hero-gradient text-white py-20 md:py-28 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
-            <svg class="absolute top-0 left-0 w-1/2 h-1/2 opacity-30" viewBox="0 0 400 400" fill="none">
-                <circle cx="200" cy="200" r="200" fill="#2563eb"/>
-            </svg>
-            <svg class="absolute bottom-0 right-0 w-1/3 h-1/3 opacity-20" viewBox="0 0 300 300" fill="none">
-                <rect x="0" y="0" width="300" height="300" rx="150" fill="#38bdf8"/>
-            </svg>
+        <!-- Replaced background SVGs with animated icons and gradients for a more interesting effect -->
+        <div class="absolute inset-0 pointer-events-none z-0">
+            <div class="absolute top-10 left-10 animate-pulse">
+                <i class="fas fa-broom text-blue-200 text-7xl opacity-40"></i>
+            </div>
+            <div class="absolute bottom-10 right-10">
+                <i class="fas fa-utensils text-green-200 text-7xl opacity-40"></i>
+            </div>
+            <div class="absolute top-1/2 left-1/4 transform -translate-y-1/2 -rotate-12 animate-spin-slow">
+                <i class="fas fa-leaf text-yellow-200 text-6xl opacity-30"></i>
+            </div>
+            <div class="absolute bottom-1/4 right-1/3 animate-wiggle">
+                <i class="fas fa-tools text-red-200 text-6xl opacity-30"></i>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-white/0 to-blue-100/30"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="md:flex md:items-center md:justify-between">
                 <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-3 animate-fade-in-up drop-shadow-lg">
-                        <span class="bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 bg-clip-text text-transparent">Premium Home Services</span> by Spotsers
+                        <span class="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 bg-clip-text text-transparent">Premium Home Services</span> by Spotser
                     </h1>
-                    <p class="text-xl md:text-2xl font-semibold mb-8 text-blue-200 animate-fade-in-up delay-100">
+                    <p class="text-xl md:text-2xl font-semibold mb-8 text-white animate-fade-in-up delay-100">
                         <i class="fas fa-bolt text-yellow-300 mr-2"></i>India's Quick Services App
                     </p>
-                    <p class="text-lg md:text-xl mb-10 opacity-90 animate-fade-in">
-                        Book trusted professionals for <span class="font-semibold text-blue-100">cleaning</span>, <span class="font-semibold text-blue-100">cooking</span>, <span class="font-semibold text-blue-100">gardening</span>, repairs, and more, all with just a few taps!
+                    <p class="text-lg md:text-xl mb-10 opacity-90 animate-fade-in text-white">
+                        Book trusted professionals for <span class="font-semibold text-white">cleaning</span>, <span class="font-semibold text-white">cooking</span>, <span class="font-semibold text-white">gardening</span>, repairs, and more, all with just a few taps!
                     </p>
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
                         <button 
@@ -79,7 +87,6 @@
                             onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"
                         >
                             <i class="fas fa-calendar-check"></i> Book a Service
-                        </button>
                         </button>
                         <a href="#how-it-works" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                             <i class="fas fa-play-circle"></i> How It Works
@@ -89,11 +96,11 @@
                         <div class="flex items-center space-x-2">
                             <i class="fas fa-star text-yellow-400"></i>
                             <span class="font-bold text-lg">4.9/5</span>
-                            <span class="text-blue-100 text-sm">Rated by 10,000+ users</span>
+                            <span class="text-gray-200 text-sm">Rated by 10,000+ users</span>
                         </div>
                         <div class="hidden sm:flex items-center space-x-2 border-l border-blue-300 pl-6">
                             <i class="fas fa-shield-alt text-green-300"></i>
-                            <span class="text-blue-100 text-sm">Verified & Trusted Pros</span>
+                            <span class="text-gray-200 text-sm">Verified & Trusted Pros</span>
                         </div>
                     </div>
                     <div class="flex flex-wrap justify-center md:justify-start mt-10 gap-4">
@@ -101,43 +108,43 @@
                             <div class="bg-white bg-opacity-90 rounded-full p-4 shadow-md mb-2">
                                 <i class="fas fa-broom text-blue-600 text-3xl"></i>
                             </div>
-                            <span class="text-xs text-blue-100">Cleaning</span>
+                            <span class="text-xs text-gray-200">Cleaning</span>
                         </div>
                         <div class="flex flex-col items-center">
                             <div class="bg-white bg-opacity-90 rounded-full p-4 shadow-md mb-2">
                                 <i class="fas fa-utensils text-green-500 text-3xl"></i>
                             </div>
-                            <span class="text-xs text-blue-100">Cooking</span>
+                            <span class="text-xs text-gray-200">Cooking</span>
                         </div>
                         <div class="flex flex-col items-center">
                             <div class="bg-white bg-opacity-90 rounded-full p-4 shadow-md mb-2">
                                 <i class="fas fa-leaf text-yellow-500 text-3xl"></i>
                             </div>
-                            <span class="text-xs text-blue-100">Gardening</span>
+                            <span class="text-xs text-gray-200">Gardening</span>
                         </div>
                         <div class="flex flex-col items-center">
                             <div class="bg-white bg-opacity-90 rounded-full p-4 shadow-md mb-2">
                                 <i class="fas fa-tools text-red-500 text-3xl"></i>
                             </div>
-                            <span class="text-xs text-blue-100">Repairs</span>
+                            <span class="text-xs text-gray-200">Repairs</span>
                         </div>
                         <div class="flex flex-col items-center">
                             <div class="bg-white bg-opacity-90 rounded-full p-4 shadow-md mb-2">
                                 <i class="fas fa-bolt text-purple-500 text-3xl"></i>
                             </div>
-                            <span class="text-xs text-blue-100">Electrical</span>
+                            <span class="text-xs text-gray-200">Electrical</span>
                         </div>
                         <div class="flex flex-col items-center">
                             <div class="bg-white bg-opacity-90 rounded-full p-4 shadow-md mb-2">
                                 <i class="fas fa-hands-helping text-pink-500 text-3xl"></i>
                             </div>
-                            <span class="text-xs text-blue-100">Senior Care</span>
+                            <span class="text-xs text-gray-200">Senior Care</span>
                         </div>
                         <div class="flex flex-col items-center">
                             <div class="bg-white bg-opacity-90 rounded-full p-4 shadow-md mb-2">
                                 <i class="fas fa-paint-roller text-indigo-400 text-3xl"></i>
                             </div>
-                            <span class="text-xs text-blue-100">Painting</span>
+                            <span class="text-xs text-gray-200">Painting</span>
                         </div>
                     </div>
                 </div>
@@ -160,7 +167,7 @@
     <section id="services" class="py-20 bg-gradient-to-b from-blue-50 via-white to-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-3 drop-shadow">Spotsers Services</h2>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-3 drop-shadow">Spotser Services</h2>
                 <p class="text-lg md:text-xl text-blue-600 max-w-2xl mx-auto">Comprehensive home services to make your life easier and your home more beautiful</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -279,7 +286,7 @@
     <section id="how-it-works" class="py-20 bg-gradient-to-b from-white via-blue-50 to-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-3 drop-shadow">How Spotsers Works</h2>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-3 drop-shadow">How Spotser Works</h2>
                 <p class="text-lg md:text-xl text-blue-600 max-w-2xl mx-auto">Getting home services has never been easier with our simple 3-step process</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -295,14 +302,14 @@
                         <span class="text-green-600 text-3xl font-extrabold">2</span>
                     </div>
                     <h3 class="text-xl font-bold text-green-800 mb-2">We Match You</h3>
-                    <p class="text-green-700 text-base">Spotsers matches you with the perfect professional based on your needs, schedule, and preferences.</p>
+                    <p class="text-green-700 text-base">Spotser matches you with the perfect professional based on your needs, schedule, and preferences.</p>
                 </div>
                 <div class="text-center bg-white p-10 rounded-2xl shadow-lg border-t-4 border-yellow-400 hover:scale-105 hover:shadow-yellow-200 transition duration-300">
                     <div class="bg-yellow-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-5 border-4 border-yellow-200 shadow">
                         <span class="text-yellow-600 text-3xl font-extrabold">3</span>
                     </div>
                     <h3 class="text-xl font-bold text-yellow-700 mb-2">Enjoy Your Service</h3>
-                    <p class="text-yellow-700 text-base">Your Spotsers professional arrives fully equipped to deliver exceptional service at your scheduled time.</p>
+                    <p class="text-yellow-700 text-base">Your Spotser professional arrives fully equipped to deliver exceptional service at your scheduled time.</p>
                 </div>
             </div>
             <div class="mt-14 text-center">
@@ -317,7 +324,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 mb-3 drop-shadow">What Our Customers Say</h2>
-                <p class="text-lg md:text-xl text-blue-600 max-w-3xl mx-auto">Don't just take our word for it – hear from our satisfied Spotsers customers</p>
+                <p class="text-lg md:text-xl text-blue-600 max-w-3xl mx-auto">Don't just take our word for it – hear from our satisfied Spotser customers</p>
             </div>
             <div class="relative">
                 <button class="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-3 text-blue-600 hover:bg-blue-100 transition hidden md:flex">
@@ -341,7 +348,7 @@
                                     <i class="fas fa-star text-sm"></i>
                                     <i class="fas fa-star text-sm"></i>
                                 </div>
-                                <p class="text-blue-700 text-base italic">"Spotsers housekeeping service transformed my home! I come back to a spotless space every time. Worth every penny."</p>
+                                <p class="text-blue-700 text-base italic">"Spotser housekeeping service transformed my home! I come back to a spotless space every time. Worth every penny."</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -357,7 +364,7 @@
                                     <i class="fas fa-star text-sm"></i>
                                     <i class="fas fa-star text-sm"></i>
                                 </div>
-                                <p class="text-green-700 text-base italic">"Our Spotsers personal chef has been a game-changer. Healthy, delicious meals prepared in our kitchen!"</p>
+                                <p class="text-green-700 text-base italic">"Our Spotser personal chef has been a game-changer. Healthy, delicious meals prepared in our kitchen!"</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -373,7 +380,7 @@
                                     <i class="fas fa-star text-sm"></i>
                                     <i class="fas fa-star text-sm"></i>
                                 </div>
-                                <p class="text-yellow-700 text-base italic">"I booked a gardener through Spotsers and my backyard has never looked better. Fast and friendly!"</p>
+                                <p class="text-yellow-700 text-base italic">"I booked a gardener through Spotser and my backyard has never looked better. Fast and friendly!"</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -389,7 +396,7 @@
                                     <i class="fas fa-star text-sm"></i>
                                     <i class="far fa-star text-sm"></i>
                                 </div>
-                                <p class="text-red-700 text-base italic">"The plumbing service was quick and efficient. Fixed my leaky faucet in no time. Highly recommend Spotsers!"</p>
+                                <p class="text-red-700 text-base italic">"The plumbing service was quick and efficient. Fixed my leaky faucet in no time. Highly recommend Spotser!"</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -405,7 +412,7 @@
                                     <i class="fas fa-star text-sm"></i>
                                     <i class="fas fa-star text-sm"></i>
                                 </div>
-                                <p class="text-purple-700 text-base italic">"The electrician from Spotsers was professional and fixed all my issues quickly. I felt safe and well taken care of!"</p>
+                                <p class="text-purple-700 text-base italic">"The electrician from Spotser was professional and fixed all my issues quickly. I felt safe and well taken care of!"</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -435,17 +442,17 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-                <p class="text-lg text-gray-600">Got questions? We’ve got answers. Here are some common queries about Spotsers.</p>
+                <p class="text-lg text-gray-600">Got questions? We’ve got answers. Here are some common queries about Spotser.</p>
             </div>
 
             <div class="space-y-4">
                 <div class="border border-gray-200 rounded-lg bg-white shadow-sm">
                     <button class="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800 font-medium text-lg toggle-faq">
-                        <span>What services does Spotsers offer?</span>
+                        <span>What services does Spotser offer?</span>
                         <i class="fas fa-chevron-down text-gray-500 transition-transform"></i>
                     </button>
                     <div class="px-6 pb-4 hidden text-gray-700 faq-answer">
-                        Spotsers offers a variety of premium home services including professional cleaning, personal chef services, expert gardening, plumbing & repairs, electrical services, and compassionate senior care assistance.
+                        Spotser offers a variety of premium home services including professional cleaning, personal chef services, expert gardening, plumbing & repairs, electrical services, and compassionate senior care assistance.
                     </div>
                 </div>
 
@@ -461,11 +468,11 @@
 
                 <div class="border border-gray-200 rounded-lg bg-white shadow-sm">
                     <button class="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800 font-medium text-lg toggle-faq">
-                        <span>Are Spotsers professionals verified?</span>
+                        <span>Are Spotser professionals verified?</span>
                         <i class="fas fa-chevron-down text-gray-500 transition-transform"></i>
                     </button>
                     <div class="px-6 pb-4 hidden text-gray-700 faq-answer">
-                        Absolutely. All Spotsers professionals undergo a rigorous vetting process, including thorough background checks, skill assessments, and comprehensive training to ensure they meet our high standards for quality, reliability, and safety.
+                        Absolutely. All Spotser professionals undergo a rigorous vetting process, including thorough background checks, skill assessments, and comprehensive training to ensure they meet our high standards for quality, reliability, and safety.
                     </div>
                 </div>
 
@@ -497,7 +504,7 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2"><i class="fas fa-envelope text-blue-600 mr-2"></i>Email Us</h3>
-                        <p class="text-gray-700 text-lg">support@spotsers.com</p>
+                        <p class="text-gray-700 text-lg">support@spotser.com</p>
                         <p class="text-gray-500 text-sm">We typically respond within 24 hours.</p>
                     </div>
                     <div>
@@ -547,7 +554,7 @@
             <div>
                 <div class="flex items-center space-x-2 mb-4">
                     <i class="fas fa-home text-blue-400 text-2xl"></i>
-                    <span class="font-bold text-xl text-white">Spotsers</span>
+                    <span class="font-bold text-xl text-white">Spotser</span>
                 </div>
                 <p class="text-sm text-gray-400">
                     India's Quick Services App - trusted by thousands for professional home help, cleaning, cooking, and more.
@@ -597,7 +604,7 @@
         </div>
 
         <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-            &copy; 2025 Spotsers. All rights reserved.
+            &copy; 2025 Spotser. All rights reserved.
         </div>
     </footer>
     <script src="script.js"></script>
