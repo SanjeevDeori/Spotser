@@ -639,7 +639,7 @@
             </div>
         </div>
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/918932869001?text=Hi%20Spotser%2C%20I%20am%20interested%20in%20your%20services!" target="_blank" rel="noopener noreferrer"
+<a href="#" id="whatsapp-button"
     class="fixed right-4 bottom-8 z-50 bg-gradient-to-br from-green-400 via-green-500 to-green-600 hover:from-green-500 hover:to-green-700 text-white rounded-full shadow-2xl p-5 flex items-center justify-center transition-all duration-300 animate-bounce hover:scale-110 ring-4 ring-green-300/30"
     aria-label="Chat on WhatsApp"
     style="box-shadow: 0 8px 32px 0 rgba(34,197,94,0.25);">
@@ -648,6 +648,63 @@
         <span class="absolute -top-2 -right-2 bg-white text-green-600 text-xs font-bold px-2 py-0.5 rounded-full shadow animate-bounce-slow border border-green-200">Chat</span>
     </span>
 </a>
+
+<!-- JavaScript to auto-send template via MyOperator -->
+<script>
+  document.getElementById("whatsapp-button").addEventListener("click", async function (e) {
+    e.preventDefault();
+
+    const userName = prompt("👋 Please enter your name:");
+    if (!userName) {
+      alert("⚠️ Name is required.");
+      return;
+    }
+
+    const userPhone = prompt("📱 Enter your WhatsApp number with country code (e.g., +91XXXXXXXXXX):");
+    if (!userPhone || !/^\+\d{10,15}$/.test(userPhone)) {
+      alert("⚠️ Please enter a valid phone number with +91 format.");
+      return;
+    }
+
+    const payload = {
+      template_name: "website",
+      receiver_contact: userPhone,
+      company_id: "688dc7bc7d4aa541",
+      params: {
+        "1": userName
+      }
+    };
+
+    console.log("⏳ Sending message to:", userPhone);
+    console.log("Payload:", payload);
+
+    try {
+      const res = await fetch("https://publicapi.myoperator.co/whatsapp/template/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer oJTN6rMpVHN57IKeMmBLU2KmxnaBXLVZyiAeUxpiOh"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+      console.log("✅ MyOperator API Response:", data);
+
+      if (data.status === true) {
+        alert("✅ WhatsApp message sent successfully! Please check your WhatsApp.");
+      } else {
+        alert("❌ Failed to send message. See browser console.");
+      }
+    } catch (error) {
+      console.error("❌ Error sending message:", error);
+      alert("An error occurred. Please check your console.");
+    }
+  });
+</script>
+
+</script>
+/
         <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
             &copy; 2025 Spotser. All rights reserved.
         </div>

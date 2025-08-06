@@ -1,12 +1,12 @@
-// Mobile menu toggle
+// ================= Mobile Menu Toggle =================
 const menuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
+
 menuButton.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('hidden');
 });
 
-//Navbar Page Follow
-
+// ================= Navbar Page Follow =================
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".nav-link");
     const sections = Array.from(document.querySelectorAll("section[id]"));
@@ -34,17 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
     updateActiveLink(); // Call once on load
 });
 
-//spotser logo takes us at the top of the page
+// ================= Scroll to Top =================
 function scrollToTop(event) {
     event.preventDefault(); // prevent jumping
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-
-
-
-
-// FAQ Accordion
+// ================= FAQ Accordion =================
 document.querySelectorAll('.toggle-faq').forEach(button => {
     button.addEventListener('click', () => {
         const answer = button.nextElementSibling;
@@ -58,14 +54,17 @@ document.querySelectorAll('.toggle-faq').forEach(button => {
     });
 });
 
-// Smooth scrolling for navigation links
+// ================= Smooth Scrolling for Nav Links =================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
 
         // Close mobile menu after clicking a link
         if (!mobileMenu.classList.contains('hidden')) {
@@ -73,7 +72,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-//image swiper
+
+// ================= Image Swiper =================
 new Swiper(".image-swiper", {
     loop: true,
     autoplay: {
@@ -92,7 +92,51 @@ new Swiper(".image-swiper", {
     spaceBetween: 20,
 });
 
-// Swiper initialization (moved from index.html and updated)
+// ================= WhatsApp Button Integration =================
+
+  document.getElementById("whatsapp-button").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const userPhone = prompt("Please enter your WhatsApp number (with country code):", "+91"); // you can make this dynamic
+
+    if (!userPhone) {
+      alert("Phone number is required.");
+      return;
+    }
+
+    fetch("https://publicapi.myoperator.co/whatsapp/template/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer oJTN6rMpVHN57IKeMmBLU2KmxnaBXLVZyiAeUxpiOh"
+      },
+      body: JSON.stringify({
+        "template_name": "website",  // Your template name
+        "receiver_contact": userPhone,
+        "company_id": "688dc7bc7d4aa541",
+        "params": {
+          "1": "Spotser",  // These depend on your template variables
+          "2": "https://sptsr.vercel.app"
+        }
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === true) {
+        alert("WhatsApp message sent successfully!");
+      } else {
+        alert("Failed to send message. Please try again.");
+        console.log(data);
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("An error occurred. Check console for details.");
+    });
+  });
+
+
+// ================= Testimonial Swiper =================
 document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.testimonial-swiper', {
         loop: true,
