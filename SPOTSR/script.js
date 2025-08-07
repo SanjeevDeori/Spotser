@@ -92,50 +92,6 @@ new Swiper(".image-swiper", {
     spaceBetween: 20,
 });
 
-// ================= WhatsApp Button Integration =================
-
-  document.getElementById("whatsapp-button").addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const userPhone = prompt("Please enter your WhatsApp number (with country code):", "+91"); // you can make this dynamic
-
-    if (!userPhone) {
-      alert("Phone number is required.");
-      return;
-    }
-
-    fetch("https://publicapi.myoperator.co/whatsapp/template/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer oJTN6rMpVHN57IKeMmBLU2KmxnaBXLVZyiAeUxpiOh"
-      },
-      body: JSON.stringify({
-        "template_name": "website",  // Your template name
-        "receiver_contact": userPhone,
-        "company_id": "688dc7bc7d4aa541",
-        "params": {
-          "1": "Spotser",  // These depend on your template variables
-          "2": "https://sptsr.vercel.app"
-        }
-      })
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === true) {
-        alert("WhatsApp message sent successfully!");
-      } else {
-        alert("Failed to send message. Please try again.");
-        console.log(data);
-      }
-    })
-    .catch(error => {
-      console.error("Error:", error);
-      alert("An error occurred. Check console for details.");
-    });
-  });
-
-
 // ================= Testimonial Swiper =================
 document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.testimonial-swiper', {
