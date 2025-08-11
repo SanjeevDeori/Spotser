@@ -559,51 +559,71 @@
                 <div class="space-y-6 text-center md:text-left">
                     <div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2"><i class="fas fa-phone-alt text-blue-600 mr-2"></i>Phone Support</h3>
-                        <p class="text-gray-700 text-lg">+91 98765 43210</p>
+                        <p class="text-gray-700 text-lg">+91  95171 04190</p>
                         <p class="text-gray-500 text-sm">Mon-Fri, 9 AM - 6 PM IST</p>
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2"><i class="fas fa-envelope text-blue-600 mr-2"></i>Email Us</h3>
-                        <p class="text-gray-700 text-lg">support@spotser.com</p>
+                        <p class="text-gray-700 text-lg">support@spotser.co.in</p>
                         <p class="text-gray-500 text-sm">We typically respond within 24 hours.</p>
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2"><i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>Our Office</h3>
-                        <p class="text-gray-700 text-lg">Keshav Nagar, Lucknow, Uttar Pradesh, 226501</p>
+                        <p class="text-gray-700 text-lg">Registered Office- H-0 , Hardoeya, Mohanlal Ganj, Lucknow.</p>
+                        <p class="text-gray-700 text-lg">Corporate Office: Greater Noida</p>
                     </div>
                 </div>
-                <div class="booking-form bg-blue-50 p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Send us a Message</h3>
-                    <form action="https://formspree.io/f/xanjpbzj" method="POST" class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-                            <input type="text" id="name" name="name" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your Name">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your@example.com">
-                        </div>
-                        <div>
-                            <label for="service" class="block text-gray-700 text-sm font-bold mb-2">Service of Interest</label>
-                            <select id="service" name="service" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <option value="">Select a Service</option>
-                                <option value="housekeeping">Housekeeping</option>
-                                <option value="cooking">Personal Chef Services</option>
-                                <option value="gardening">Beauty & Spa</option>
-                                <option value="plumbing">Plumbing & Repairs</option>
-                                <option value="electrical">Electrical Services</option>
-                                <option value="senior-care">Driver</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us how we can help you..."></textarea>
-                        </div>
-                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg font-semibold w-full transition duration-300 shadow-md transform hover:scale-105">
-                            Send Message
-                        </button>
-                    </form>
+  <div class="booking-form bg-blue-50 p-8 rounded-xl shadow-lg">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Send us a Message</h3>
+    <form action="https://formspree.io/f/movlyzdr" method="POST" class="space-y-4">
+        <div>
+            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+            <input type="text" id="name" name="name" required 
+                class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                placeholder="Your Name">
+        </div>
+        <div>
+            <label for="contact" class="block text-gray-700 text-sm font-bold mb-2">Contact Number</label>
+            <input type="tel" id="contact" name="contact" required 
+                pattern="[0-9]{10}" 
+                class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                placeholder="10-digit number">
+        </div>
+        <div>
+            <label for="service" class="block text-gray-700 text-sm font-bold mb-2">Service of Interest</label>
+            <select id="service" name="service" 
+                class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <option value="">Select a Service</option>
+                <option value="beauty-spa">Beauty & Spa</option>
+                <option value="cleaning">Cleaning</option>
+                <option value="cooking">Cooking</option>
+                <option value="driver">Driver</option>
+                <option value="electrical">Electrical Services</option>
+                <option value="home-interiors">Home Interiors</option>
+                <option value="plumbing">Plumbing & Repairs</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" required 
+                class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                placeholder="Tell us how we can help you..."></textarea>
+        </div>
+        <button type="submit" 
+            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg font-semibold w-full 
+            transition duration-300 shadow-md transform hover:scale-105">
+            Send Message
+        </button>
+    </form>
+</div>
+
+
+
                 </div>
             </div>
         </div>
@@ -642,14 +662,14 @@
             <div>
                 <h4 class="text-white text-lg font-semibold mb-4">Customer Support</h4>
                 <ul class="space-y-2 text-sm">
-
-                   <li><a href="help-center.html" class="hover:text-white transition duration-300">Help Center</a></li>
                 
                    <li><a href="privacy-policy.html" class="hover:text-white transition duration-300">Privacy Policy</a></li>
                 
-                  <li><a href="terms-of-service.html" class="hover:text-white transition duration-300">Terms of Service</a></li>
-                
-                  <li><a href="cancellation-refund.html" class="hover:text-white transition duration-300">Cancellation & Refund</a></li>
+                  <li><a href="Terms-and-Conditions.html" class="hover:text-white transition duration-300">Terms & Conditions</a></li>
+
+                  <li><a href="Service-Partner-Policy.html" class="hover:text-white transition duration-300">Service Partner Policy</a></li>
+
+                  <li><a href="Cancellation-Refund.html" class="hover:text-white transition duration-300">Cancellation & Refund Policy</a></li>
                 </ul>
             </div>
 
