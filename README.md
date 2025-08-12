@@ -2,7 +2,7 @@
 
 Spotser is a premium home services platform designed to simplify everyday life by connecting users with reliable professionals across a range of household needs — from cleaning and repair to skilled services like electricians, maids, and cooks and many more services.
 
-Live Demo for testing (it is not the final version yet ): https://sptsr.vercel.app/ 
+
 ---
 
 ## 🚀 Features
